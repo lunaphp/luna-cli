@@ -1,12 +1,12 @@
 
  <p align="center"><img src="https://avatars3.githubusercontent.com/u/59028537?s=400&u=c48f42d3b05f3f8c83c2ba916aa9277ebe90dc3d&v=4" width="150"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/lunaphp/framework"><img src="https://travis-ci.org/luna-cli/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/lunaphp/framework"><img src="https://poser.pugx.org/lunaphp/luna-cli/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/lunaphp/framework"><img src="https://poser.pugx.org/lunaphp/luna-cli/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/lunaphp/framework"><img src="https://poser.pugx.org/lunaphp/luna-cli/license.svg" alt="License"></a>
-</p>
+## LunaCLI Development
 
-## About Luna-CLI
+[![Build Status](https://travis-ci.org/lunaphp/luna-cli.svg?branch=master)](https://travis-ci.org/lunaphp/luna-cli)
+[![GitHub forks](https://img.shields.io/github/forks/lunaphp/luna-cli)](https://github.com/lunaphp/luna-cli/network)
+[![GitHub license](https://img.shields.io/github/license/lunaphp/luna-cli)](https://github.com/lunaphp/luna-cli/blob/master/license.txt)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lunaphp/luna-cli/pulls)
+
+## About LunaCLI
 The Luna command-line interface
