@@ -9,4 +9,4 @@
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lunaphp/luna-cli/pulls)
 
 ## About LunaCLI
-The Luna command-line interface
+The LunaPHP command-line interface.
