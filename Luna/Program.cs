@@ -7,6 +7,9 @@ using Colorify;
 using Colorify.UI;
 using ToolBox.Platform;
 using System.IO;
+using CliWrap.Buffered;
+using CliWrap;
+using System.Threading;
 
 namespace Luna
 {
@@ -86,7 +89,8 @@ namespace Luna
                         {
                             if (Function.Validation.ExistDirectory())
                             {
-                                if (!File.Exists(".env")) {
+                                if (!File.Exists(".env"))
+                                {
                                     Function.Alert.ExistFileEnv();
                                     break;
                                 }
@@ -127,13 +131,60 @@ namespace Luna
                             {
                                 Function.Alert.ExistDirectory();
                             }
-                            
+
                         }
                         else
                         {
                             _colorify.WriteLine("\nCreating a new page or derivations with null or empty name is not allowed.", Colors.bgDanger);
                             _colorify.ResetColor();
                         }
+                    }
+                    break;
+                case "-s":
+                case "--server":
+                    if (args.Count() >= 2)
+                    {
+                        if (!Function.Validation.ExistDirectory())
+                        {
+                            Function.Alert.ExistDirectory();
+                            break;
+                        }
+           
+                        switch (args[1].ToString())
+                        {
+                            case "start":
+                                var port = "8080";
+                                if (args.Count() >= 3)
+                                {
+                                    port = args[2].ToString();
+                                }
+                                _colorify.WriteLine("Wait for starting server at port " + port, Colors.bgMuted);
+                                Cli.Wrap("php").WithArguments("-S localhost:" + port + " -t public ").ExecuteBufferedAsync().Select(r => r.StandardOutput);
+                                Thread.Sleep(3000);
+                                var urlServer = "http://localhost:" + port;
+                                _colorify.WriteLine("Server successfully started on:", Colors.bgSuccess);
+                                _colorify.WriteLine(urlServer, Colors.bgSuccess);
+                                var chrome = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+                                if (File.Exists(chrome))
+                                {
+                                    _colorify.WriteLine("Wait by opening google chromes...", Colors.bgMuted);
+                                    Thread.Sleep(2000);
+                                    Cli.Wrap(chrome).WithArguments(urlServer).ExecuteAsync();
+                                }
+                                break;
+                            case "stop":
+                                
+                                break;
+                            default:
+                                _colorify.WriteLine("Command \"" + args[1].ToString() + "\" is not valid, use one of these commands: start or stop.", Colors.bgDanger);
+                                _colorify.ResetColor();
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        _colorify.WriteLine("\nThe server command must start or stop.", Colors.bgDanger);
+                        _colorify.ResetColor();
                     }
                     break;
                 case "--help":
@@ -183,7 +234,7 @@ namespace Luna
             return fvi.FileVersion;
         }
 
-       
+
 
         private static int RunOptionsAndReturnExitCode(Options options)
         {

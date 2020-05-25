@@ -8,53 +8,71 @@
     ".NETCoreApp,Version=v3.1": {
       "Luna/1.0.0": {
         "dependencies": {
-          "CommandLineParser": "2.6.0",
-          "Dapper": "2.0.30",
+          "CliShellWrap": "2.8.1",
+          "CliWrap": "3.0.2",
+          "CommandLineParser": "2.8.0",
+          "Dapper": "2.0.35",
           "DotNetEnv": "1.4.0",
-          "MySqlConnector": "0.61.0",
+          "MySqlConnector": "0.66.0",
           "Newtonsoft.Json": "12.0.3",
-          "dein.Colorify": "2.4.1",
-          "dein.ToolBox": "1.5.4"
+          "dein.Colorify": "2.5.2",
+          "dein.ToolBox": "1.6.4"
         },
         "runtime": {
           "Luna.dll": {}
         }
       },
-      "CommandLineParser/2.6.0": {
+      "CliShellWrap/2.8.1": {
         "runtime": {
-          "lib/netstandard2.0/CommandLine.dll": {
-            "assemblyVersion": "2.6.0.0",
-            "fileVersion": "2.6.0.0"
+          "lib/netcoreapp3.0/CliShellWrap.dll": {
+            "assemblyVersion": "2.8.1.0",
+            "fileVersion": "2.8.1.0"
           }
         }
       },
-      "Dapper/2.0.30": {
+      "CliWrap/3.0.2": {
+        "runtime": {
+          "lib/netcoreapp3.0/CliWrap.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "CommandLineParser/2.8.0": {
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.0.0"
+          }
+        }
+      },
+      "Dapper/2.0.35": {
         "dependencies": {
-          "System.Reflection.Emit.Lightweight": "4.6.0"
+          "System.Reflection.Emit.Lightweight": "4.7.0"
         },
         "runtime": {
           "lib/netstandard2.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.30.32292"
+            "fileVersion": "2.0.35.21366"
           }
         }
       },
-      "dein.Colorify/2.4.1": {
+      "dein.Colorify/2.5.2": {
         "runtime": {
-          "lib/netcoreapp3.0/Colorify.dll": {
-            "assemblyVersion": "2.4.1.0",
-            "fileVersion": "2.4.1.0"
+          "lib/netcoreapp3.1/Colorify.dll": {
+            "assemblyVersion": "2.5.2.0",
+            "fileVersion": "2.5.2.0"
           }
         }
       },
-      "dein.ToolBox/1.5.4": {
+      "dein.ToolBox/1.6.4": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
-          "lib/netcoreapp3.0/ToolBox.dll": {
-            "assemblyVersion": "1.5.4.0",
-            "fileVersion": "1.5.4.0"
+          "lib/netcoreapp3.1/ToolBox.dll": {
+            "assemblyVersion": "1.6.4.0",
+            "fileVersion": "1.6.4.0"
           }
         }
       },
@@ -78,11 +96,11 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "MySqlConnector/0.61.0": {
+      "MySqlConnector/0.66.0": {
         "runtime": {
           "lib/netcoreapp3.0/MySqlConnector.dll": {
-            "assemblyVersion": "0.61.0.0",
-            "fileVersion": "0.61.0.0"
+            "assemblyVersion": "0.66.0.0",
+            "fileVersion": "0.66.0.0"
           }
         }
       },
@@ -367,7 +385,7 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.6.0",
+          "System.Reflection.Emit.Lightweight": "4.7.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Reflection.TypeExtensions": "4.3.0",
@@ -459,7 +477,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit.Lightweight/4.6.0": {},
+      "System.Reflection.Emit.Lightweight/4.7.0": {},
       "System.Reflection.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -752,33 +770,47 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CommandLineParser/2.6.0": {
+    "CliShellWrap/2.8.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jjJ2Ey2pPY6OeY74Qau2cH+M+pN4kvvSP+kKlDzIZUcJs1oK+QlNjQYnm8HQj2fQa2aZLtwJig4MI0Vbx4YBSA==",
-      "path": "commandlineparser/2.6.0",
-      "hashPath": "commandlineparser.2.6.0.nupkg.sha512"
+      "sha512": "sha512-Pprk/XqWILS2FJieMCgZ2WtDKKGYzlcXFGMoK8b9RPeO25Bjc3HxWiRokZUVmtXG4yWfHVJuQOlhyDlGNzZrIQ==",
+      "path": "clishellwrap/2.8.1",
+      "hashPath": "clishellwrap.2.8.1.nupkg.sha512"
     },
-    "Dapper/2.0.30": {
+    "CliWrap/3.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nL0VEpvunjIQ3jTI1x27b7BS3BnRnn5b2vhxsU2pWEd9SljF5WUQLoV/83qXTm0yaHmejRV/ndI3EApGlrgPqw==",
-      "path": "dapper/2.0.30",
-      "hashPath": "dapper.2.0.30.nupkg.sha512"
+      "sha512": "sha512-cnVS/s/oOIHz2S3C326cHmDHn/mKVC87u97nb5S8spAy+kbo1MU04ecb7IpXrW/x7ko7akOMVqpJDlUGkjuXUg==",
+      "path": "cliwrap/3.0.2",
+      "hashPath": "cliwrap.3.0.2.nupkg.sha512"
     },
-    "dein.Colorify/2.4.1": {
+    "CommandLineParser/2.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Hd2o0fjY/LzSUbCKNkp5U2BojnqnVf7XX74wR3VmMlRBFLZmCdXTTFeo/Cq+ThMi4/CELi6yYAOmTgFhx1q/Lg==",
-      "path": "dein.colorify/2.4.1",
-      "hashPath": "dein.colorify.2.4.1.nupkg.sha512"
+      "sha512": "sha512-eco2HlKQBY4Joz9odHigzGpVzv6pjsXnY5lziioMveQxr+i2Z7xYcIOMeZTgYiqnMtMAbXMXsVhrNfWO5vJS8Q==",
+      "path": "commandlineparser/2.8.0",
+      "hashPath": "commandlineparser.2.8.0.nupkg.sha512"
     },
-    "dein.ToolBox/1.5.4": {
+    "Dapper/2.0.35": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vd3vfRNuU31jvsvTeoDoDe1x/ZPDZWnj7HsQpPc8scc5hegmcjZomb0yfHnvGs/B03+AUw/OM9WEKPgjOjT9BA==",
-      "path": "dein.toolbox/1.5.4",
-      "hashPath": "dein.toolbox.1.5.4.nupkg.sha512"
+      "sha512": "sha512-/xAgd8BO8EDnJ0sURWEV8LptHHvTKxoYiT63YUF2U/yWE2VyUCqR2jcrtEyNngT9Kjzppecz95UKiBla3PnR7g==",
+      "path": "dapper/2.0.35",
+      "hashPath": "dapper.2.0.35.nupkg.sha512"
+    },
+    "dein.Colorify/2.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3xvgzAaXRGDpioxE2UolvaDFb+x4pAaDpTQEsnQHja4id4KQyUPOU8BLIv+4ul75hT7Ouv1cfeTNdCz4FXbmDw==",
+      "path": "dein.colorify/2.5.2",
+      "hashPath": "dein.colorify.2.5.2.nupkg.sha512"
+    },
+    "dein.ToolBox/1.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HYmAKbZL0qWO3YtZAmHnSmcfycFgZX+bGS2IdKUw/zryPItQF58EaeitVkikHJTE/1Jw1mQHh+dAc/0pSZt1IA==",
+      "path": "dein.toolbox/1.6.4",
+      "hashPath": "dein.toolbox.1.6.4.nupkg.sha512"
     },
     "DotNetEnv/1.4.0": {
       "type": "package",
@@ -808,12 +840,12 @@
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
     },
-    "MySqlConnector/0.61.0": {
+    "MySqlConnector/0.66.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-E01yibVzCkVOmhNsUb+B4amjQKfKFlGiR1huNd6Q8aTCqBrACo0I3JMKvJBMpZfYhAsR8bqB9496PwcGpr+LuQ==",
-      "path": "mysqlconnector/0.61.0",
-      "hashPath": "mysqlconnector.0.61.0.nupkg.sha512"
+      "sha512": "sha512-laGcF5yxoWsBaoYJVkJXxsxiyIpz2lQn8FobpZiSGTWHEJQfhIlKHxhmXyUwD9WOsINKYJ3kmGNqkFojZW3VSA==",
+      "path": "mysqlconnector/0.66.0",
+      "hashPath": "mysqlconnector.0.66.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
@@ -1123,12 +1155,12 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit.Lightweight/4.6.0": {
+    "System.Reflection.Emit.Lightweight/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-j/V5HVvxvBQ7uubYD0PptQW2KGsi1Pc2kZ9yfwLixv3ADdjL/4M78KyC5e+ymW612DY8ZE4PFoZmWpoNmN2mqg==",
-      "path": "system.reflection.emit.lightweight/4.6.0",
-      "hashPath": "system.reflection.emit.lightweight.4.6.0.nupkg.sha512"
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Extensions/4.3.0": {
       "type": "package",

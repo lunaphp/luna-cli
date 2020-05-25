@@ -13,18 +13,18 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <None Include="$(NuGetPackageRoot)dein.toolbox\1.5.4\contentFiles\any\any\cmd.bat" Condition="Exists('$(NuGetPackageRoot)dein.toolbox\1.5.4\contentFiles\any\any\cmd.bat')">
+    <None Include="$(NuGetPackageRoot)dein.toolbox\1.6.4\contentFiles\any\any\cmd.bat" Condition="Exists('$(NuGetPackageRoot)dein.toolbox\1.6.4\contentFiles\any\any\cmd.bat')">
       <NuGetPackageId>dein.ToolBox</NuGetPackageId>
-      <NuGetPackageVersion>1.5.4</NuGetPackageVersion>
+      <NuGetPackageVersion>1.6.4</NuGetPackageVersion>
       <NuGetItemType>None</NuGetItemType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>cmd.bat</TargetPath>
       <Private>True</Private>
       <Link>cmd.bat</Link>
     </None>
-    <None Include="$(NuGetPackageRoot)dein.toolbox\1.5.4\contentFiles\any\any\cmd.sh" Condition="Exists('$(NuGetPackageRoot)dein.toolbox\1.5.4\contentFiles\any\any\cmd.sh')">
+    <None Include="$(NuGetPackageRoot)dein.toolbox\1.6.4\contentFiles\any\any\cmd.sh" Condition="Exists('$(NuGetPackageRoot)dein.toolbox\1.6.4\contentFiles\any\any\cmd.sh')">
       <NuGetPackageId>dein.ToolBox</NuGetPackageId>
-      <NuGetPackageVersion>1.5.4</NuGetPackageVersion>
+      <NuGetPackageVersion>1.6.4</NuGetPackageVersion>
       <NuGetItemType>None</NuGetItemType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TargetPath>cmd.sh</TargetPath>

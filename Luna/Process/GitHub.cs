@@ -1,8 +1,12 @@
-﻿using Colorify;
+﻿using CliWrap.Buffered;
+using CliWrap;
+using Colorify;
 using System;
 using System.IO;
 using System.IO.Compression;
 using System.Net;
+using ToolBox.Platform;
+using System.Threading;
 
 namespace Luna.Process
 {
@@ -10,12 +14,13 @@ namespace Luna.Process
     {
         public static void Download(string username, string repository, string project)
         {
+            var versionDown = "v1.0";
             var pathDownload = Environment.CurrentDirectory + @"\" + project + @"\";
-            var fileName = repository + "-master.zip";
-            var localZipFile = pathDownload+ fileName;
-            var pathDir = pathDownload + repository + "-master";
+            var fileName = repository + "-"+ versionDown + ".zip";
+            var localZipFile = pathDownload + fileName;
+            var pathDir = pathDownload + repository + "-" + versionDown.Replace("v", "");
 
-            var remoteUri = "https://codeload.github.com/" + username + "/" + repository + "/zip/master";
+            var remoteUri = "https://codeload.github.com/" + username + "/" + repository + "/zip/" + versionDown;
 
             if (!Directory.Exists(pathDownload))
                 Directory.CreateDirectory(pathDownload);
@@ -48,6 +53,20 @@ namespace Luna.Process
             Program._colorify.WriteLine("Delete Folder \"" + pathDir + "\"", Colors.bgMuted);
             Directory.Delete(pathDir, true);
             Program._colorify.WriteLine("Project \"" + project + "\" successfully created!", Colors.bgSuccess);
+            Program._colorify.WriteLine("Attention is important that you have installed PHP, Composer and Yarn.", Colors.bgWarning);
+            Program._colorify.WriteLine("Wait Configuring...", Colors.bgMuted);
+
+            Cli.Wrap("php").WithArguments("-r \"file_exists('" + project + "/.env') || copy('" + project + "/.env.example', '" + project + "/.env');\"").ExecuteBufferedAsync().Select(r => r.StandardOutput);
+            Thread.Sleep(3000);
+            var php = Cli.Wrap("php").WithArguments("-r \"echo file_exists('" + project + "/.env') ? '1' : '0';\"").ExecuteBufferedAsync().Select(r => r.StandardOutput);
+            if (php.Task.Result.ToString() != "1")
+            {
+                Program._colorify.WriteLine("Please install php and execute the command \"php -r \"file_exists('.env') || copy('.env.example', '.env');\"\" in the directory \"" + pathDownload + "\"", Colors.bgWarning);
+            }
+            var composer = Cli.Wrap("composer").WithArguments("install -d " + project + "/ --profile").ExecuteBufferedAsync().Select(r => r.StandardOutput);
+
+            Program._colorify.WriteLine("Please execute the command \"composer install -d " + project + "/ --profile\"", Colors.bgInfo);
+            Program._colorify.WriteLine("Please install yarn and execute the command \"yarn install\" in the directory \"" + pathDownload + @"public\" + "\"", Colors.bgInfo);
         }
 
         private static void Unzip(string archive, string destination, bool overwrite)
