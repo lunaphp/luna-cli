@@ -10,3 +10,11 @@
 
 ## About LunaCLI
 The LunaPHP command-line interface.
+
+## Installation
+To install download the latest release released and configure the path in the environment variables.
+
+## Help
+The LunaCLI ships with command documentation that is accessible with the --help flag.
+
+<img src="https://i.ibb.co/V3Q1xrd/lunacli.png" />
